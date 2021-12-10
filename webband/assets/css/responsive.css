@@ -1,0 +1,70 @@
+/* PC */
+@media (min-width: 1024px){
+
+}
+/* Table */
+@media (min-width: 740px) and (max-width: 1039px){
+
+}
+/* Table & Mobi */
+@media (max-width: 1023px){
+    .btn{
+        padding: 15px 16px;
+    }
+}
+/* Phone */
+@media (max-width: 740px){
+    .s-full-width,
+    .s-column-full{
+        width: 100% !important;
+    }
+    .s-magtop-8{
+        margin-top: 8px !important;
+    }
+
+    #heard {
+        overflow: hidden; /* khi đối tượng con vượt qa thì hidden: hiện lên */
+    }
+
+    #heard .menu-mobi-button{
+        display: block;
+    }
+
+    #heard .search-button{
+        display: none;
+    }
+
+     #nav{
+        display: block;
+     }
+
+    #nav li a{
+        padding: 1px 24px ;
+    }
+
+    #nav > li{
+        display: block;
+    }
+
+    #nav > li:first-child{ /* first-child lấy tk con đầu tiên */
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial; /* giá trị mặc định  */
+        background-color: #333;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 40px;
+    } 
+
+    #content .pic-img{
+        width: 60%;
+        width: 300px;
+    }
+    .contact-form{
+        margin-top: 16px;
+    }
+    
+}

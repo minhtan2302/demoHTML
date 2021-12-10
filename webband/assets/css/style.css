@@ -1,0 +1,490 @@
+/* Reset css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*  điều khiển hành vi */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+    /* giải quyết vấn đề float */
+}
+
+.text-white {
+    color: #fff !important;
+    /* chữ màu trắng.. copy class vào class nào cần đổi sang chữ trắng */
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: red;
+}
+
+.row::after {
+    /* thay vì tạo ra class clear */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.column {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.column-secon {
+    width: 50%;
+}
+
+.column-third {
+    width: 33.3333%;
+}
+
+.column-full {
+    width: 100%;
+}
+
+.magtop-8 {
+    margin-top: 8px !important;
+}
+
+.magtop-16 {
+    margin-top: 16px !important;
+}
+
+.magtop-32 {
+    margin-top: 32px! important;
+}
+
+
+/*
+1. vi tri
+2. kich thuoc  ( dai , rong ) 
+3. mau sac
+4. kieu dang ( chu , hinh )
+*/
+
+
+/* Main */
+
+#main {}
+
+#heard {
+    position: fixed;
+    /*heard luôn hiện*/
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+    z-index: 1;
+    /* nổi lên trên ảnh */
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav>li>a {
+    /* chi tiet */
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li:hover a,
+#nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 13px;
+}
+
+#heard .menu-mobi-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#heard .menu-mobi-button,
+#heard .search-button {
+    float: right;
+    padding: 0 21px;
+    /* khoảng cách trước sau */
+}
+
+#heard .menu-mobi-button:hover {
+    background-color: #ccc;
+}
+
+#heard .menu-mobi-button:hover .menu-icon {
+    color: #000;
+}
+
+#heard .search-button:hover {
+    cursor: pointer;
+    /* cursor: thay doi tro chuot khi click */
+    background-color: red;
+}
+
+#heard .menu-mobi-button,
+#heard .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    /* căn trên dưới */
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.jpg') top center / cover no-repeat;
+}
+
+
+/* #slider .text-content{
+    position:absolute;
+    bottom: 18px;
+    color:red;
+    /* có thể sử dụng để căn giữa: width:100% or right,left:0  
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center; /* căn giữa phải có 
+} */
+
+#slider .text-heading {
+    font-weight: 500;
+    /* giảm độ dày */
+    font-size: 25px;
+}
+
+#slider .text-decription {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content {}
+
+#content .content-section {
+    width: 100%;
+    padding: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    /* hiển thị rỏ trên ipad */
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    /* khoảng cách các chữ */
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    font-size: initial;
+    /* in nghiên */
+    opacity: 0.6;
+    /* làm mờ */
+}
+
+#content .about-content {
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    /* căn đều 2 bên  */
+    line-height: 1.4;
+    /* khoảng cách từng dòng */
+}
+
+#content .real-love {
+    margin-top: 32px;
+}
+
+#content .pictures-name {
+    font-size: 15px;
+    color: red;
+}
+
+#content .pic-img {
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 4px;
+    /* tạo ra góc bo  */
+}
+
+
+/* Tour section */
+
+#content .tour-section {
+    background-color: #000;
+}
+
+#content .travel-list {
+    list-style: none;
+    /* bỏ dấu chấm đầu */
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+#content .travel-list li {
+    color: #14bef1;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    /* gạch chia ô */
+}
+
+.travel-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.travel-list .next-day {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    /* bo tròn */
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+    /* đưa lên giữa */
+}
+
+
+/* Places */
+
+.places-list {
+    margin-top: 16px;
+    padding-bottom: 48px;
+}
+
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+    /* khoảng cách giữa ảnh  */
+}
+
+.place-img:hover {
+    opacity: 0.6;
+    /* làm mờ */
+}
+
+.place-heading {
+    font-size: 15px;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-text {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+
+/* Contact from */
+
+.section-sub-heading {
+    margin-bottom: 48px;
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline;
+}
+
+.contact-info a {
+    color: rgb(37, 37, 240);
+    opacity: 0.6;
+}
+
+.contact-info a:hover {
+    opacity: 1.4;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+
+/* Map */
+
+.map-section img {
+    width: 100%;
+}
+
+
+/* Footer section */
+
+#footer {
+    width: 100%;
+    text-align: center;
+    padding: 64px 16px;
+}
+
+.copy-right {
+    margin-top: 16px;
+    color: #757575;
+}
+
+.net-list {
+    font-size: 24px;
+}
+
+.net-list a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.net-list a:hover {
+    color: #ccc;
+}
+
+.page-two {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 20px;
+}
+
+.name-page {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.img-page-two {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.img-page-two img {
+    width: 100%;
+    border-radius: 6px;
+    padding-bottom: 20px;
+    height: 800px;
+}
+
+.icon-back {
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.icon-back:hover i {
+    color: #f44336;
+}
+
+.icon-back i,
+a {
+    padding-right: 5px;
+    color: #000;
+}
